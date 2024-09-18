@@ -6,13 +6,13 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:24:38 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/18 13:16:27 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/18 13:54:19 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 

@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
+/*   By: madel-va <madel-va@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 13:33:34 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/18 13:16:36 by madel-va         ###   ########.fr       */
+/*   Created: 2024/09/18 13:23:20 by madel-va          #+#    #+#             */
+/*   Updated: 2024/09/18 13:30:04 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
+	char	*dest;
 
-	if (dest == src || !size)
-		return (dest);
-	i = 0;
-	while (i < size)
-	{
-		(*(char )dest + i) = (*(char )src + i);
-		i++;
-	}
-	return (i);
+	dest =(char *)malloc(size_of(*s))
+	return (dest);
 }

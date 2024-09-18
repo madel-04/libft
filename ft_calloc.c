@@ -6,13 +6,13 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:01:03 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/18 13:14:54 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/18 13:50:48 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	calloc(size_t nmemb, size_t size)
+void	ft_calloc(size_t nmemb, size_t size)
 {
 	void	*buffer;
 

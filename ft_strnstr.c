@@ -17,7 +17,7 @@ char    *ft_strnstrconst(char *big,	const char *little, size_t len)
 	size_t  position;
 
 	if(*big == '\0')
-		return ((char *)str);
+		return ((char *)big);
 	position = ft_strlen((char *)little);
 	while (*big != '\0' && len-- >= position)
 	{

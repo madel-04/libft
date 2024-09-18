@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 11:24:38 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/18 13:16:27 by madel-va         ###   ########.fr       */
+/*   Created: 2024/09/18 13:01:03 by madel-va          #+#    #+#             */
+/*   Updated: 2024/09/18 13:14:54 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+void	calloc(size_t nmemb, size_t size)
 {
-	int	i;
+	void	*buffer;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return (s[i]);
-		i++;
-	}
-	if (c == '\0')
-		return (s[i]);
-	else
+	if (nmemb == 0)
 		return NULL;
+	buffer = (void *)malloc(nmemb * size);
+	if (!buffer)
+		return NULL;
+	ft_bzero(buffer, size);
+	return (buffer);
 }

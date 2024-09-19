@@ -40,4 +40,17 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
+typedef struct	s_list
+{
+	void	*content;
+	struct s_list	*next;
+}			t_list;
+/* "*" es el operador de desreferencia, que nos permite acceder al valor al que apunta el puntero
+ Si tienes un puntero que apunta a una dirección de memoria, el operador * te permite acceder al contenido de esa dirección.
+  "&" sirve para acceder a la dirección de memoria
+  +--------+---------+      +--------+---------+      +--------+---------+
+  | content |  next  |----->| content |  next  |----->| content |  next  |
+  +--------+---------+      +--------+---------+      +--------+---------+
+                             (Nodo 1)               (Nodo 2)                (Nodo 3)
+*/
 #endif

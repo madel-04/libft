@@ -6,7 +6,7 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:23:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/20 12:30:46 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:46:28 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,11 @@ static char	**ft_free_split(char **dest, int i)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_split2(char**dest, char const *s, int i, char c)
 {
-	char	**dest;
-	int	i;
 	int	len;
 	const char	*start;
 
-	if (!s)
-		return (NULL);
-	dest = (char **)malloc((ft_word_count(*s, c) + 1) * sizeof(char *));
-	if (!dest)
-		return (NULL);
-	i = 0;
 	while (*s)
 	{
 		if (*s != c)
@@ -74,6 +66,20 @@ char	**ft_split(char const *s, char c)
 		else
 			s++;
 	}
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**dest;
+	int	i;
+
+	if (!s)
+		return (NULL);
+	dest = (char **)malloc((ft_word_count(*s, c) + 1) * sizeof(char *));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	ft_split2(dest, *s, i, c);
 	return (dest);
 }
 /*Representacion de un array de strings:
@@ -84,7 +90,6 @@ char *array[] = {
 	"Of",
 	"Strings"
 };
-
 
 array[0] --> "Hello"
 array[1] --> "World"

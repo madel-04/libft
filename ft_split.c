@@ -6,7 +6,7 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:23:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/20 12:24:26 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:30:46 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,14 @@ static size_t	ft_word_count(char const *s, char c)
 		}
 	}
 	return (count);
+}
+
+static char	**ft_free_split(char **dest, int i)
+{
+	while (i > 0)
+		free(dest[--i]);
+	free(dest);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -60,12 +68,7 @@ char	**ft_split(char const *s, char c)
 			}
 			dest[i] = ft_substr(*s, start, len);
 			if (!dest[i])
-			{
-				while (i > 0)
-					free(dest[--i]);
-				free(dest);
-				return NULL;
-			}
+				return (ft_free_split(dest, i));
 			i++;
 		}
 		else

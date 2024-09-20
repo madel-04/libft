@@ -49,7 +49,7 @@ SRCS	= ft_atoi.c\
 OBJS	= $(SRCS%.c=%.o)
 #Para generar los archivos objetos de una lista fuente SRCS
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra #"-g3 -fsanitize=address" #Cuando compilas te dice si hay un leak de memoria
 
 $(NAME):
 	gcc $(FLAGS) -c $(SRCS) -I./ 

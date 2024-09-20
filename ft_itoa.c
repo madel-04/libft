@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*Usa malloc y genera una string que represente el valor 
-entero recibido como argumento. Gestiona NEGAATIVOS*/
+entero recibido como argumento. Gestiona NEGATIVOS*/
 static int	ft_num_len(int n) /*Static para qie solo sea visible para el archivo donde se define*/
 {
 	int	len;

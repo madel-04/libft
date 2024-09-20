@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/09/19 15:35:05 by marvin            #+#    #+#             */
 /*   Updated: 2024/09/19 15:35:05 by marvin           ###   ########.fr       */
 /*                                                                            */
@@ -12,11 +15,13 @@
 
 #include "libft.h"
 
-/*Usa malloc y genera una string que represente el valor 
+
+/*Usa malloc y genera una string que represente el valor
 entero recibido como argumento. Gestiona NEGATIVOS*/
-static int	ft_num_len(int n) /*Static para qie solo sea visible para el archivo donde se define*/
+static int	ft_num_len(int n)
+		/*Static para qie solo sea visible para el archivo donde se define*/
 {
-	int	len;
+	int len;
 
 	len = 1; /*Posible numero negativo*/
 	if (n < 0)
@@ -31,13 +36,13 @@ static int	ft_num_len(int n) /*Static para qie solo sea visible para el archivo 
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int	len;
-	long	nb;
+	char *str;
+	int len;
+	long nb;
 
 	nb = n; /*para gestionar los valores mejor*/
 	len = ft_num_len(nb);
-	str = (char *)malloc(sizeof(char) * (len +1));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	if (nb < 0)

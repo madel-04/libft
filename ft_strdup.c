@@ -16,6 +16,6 @@ char	*ft_strdup(const char *s)
 {
 	char	*dest;
 
-	dest =(char *)malloc(size_of(*s))
+	dest = (char *)malloc(sizeof(*s));
 	return (dest);
 }

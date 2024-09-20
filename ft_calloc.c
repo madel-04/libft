@@ -6,7 +6,7 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:01:03 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/20 11:07:53 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:53:23 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ void	ft_calloc(size_t nmemb, size_t size)
 {
 	void	*buffer;
 
-	if (nmemb == 0 || size == 0/* || nmemb > SIZE_MAX / size (Para eviar un overflow)*/)
-		return NULL;
+	if (nmemb == 0 || size == 0 /* || nmemb > SIZE_MAX
+		/ size (Para eviar un overflow)*/)
+		return (NULL);
 	buffer = (char *)malloc(nmemb * size);
 	if (!buffer)
-		return NULL;
+		return (NULL);
 	ft_bzero(buffer, size * nmemb);
 	return (buffer);
 }

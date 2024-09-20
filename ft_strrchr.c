@@ -6,7 +6,7 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:23:24 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/18 13:54:43 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:55:05 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (c == '\0')
-		return (*s[i]);
+		return (s[i]);
 	if (j = 0)
-		return NULL;
+		return (NULL);
 	else
-		return (*s[j]);
+		return (s[j]);
 }

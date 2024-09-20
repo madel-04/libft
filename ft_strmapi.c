@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/09/19 19:39:33 by marvin            #+#    #+#             */
 /*   Updated: 2024/09/19 19:39:33 by marvin           ###   ########.fr       */
 /*                                                                            */
@@ -12,12 +15,13 @@
 
 #include "libft.h"
 
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 /*Puntero a una función que retorna un char y que de parametros tiene un unsigned int y char*/
 {
-	char	*dest;
-	size_t	len; /*Evitar desbordamientos*/
-	size_t	i;
+	char *dest;
+	size_t len; /*Evitar desbordamientos*/
+	size_t i;
 
 	if (!s || !f)
 		return (NULL);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madel-va <madel-va@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:52:06 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/17 11:55:37 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:54:13 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (s1[i] - s2[i]);
 }
 /*
-int     main()
+int	main(void)
 {
-    printf("%d", ft_strncmp("Hello", "Hello1", 8));
-    printf("\n%d", ft_strncmp("Hello", "He", 8));
-    printf("\n%d", ft_strncmp("He", "Hello", 8));
-    printf("\n%d", ft_strncmp("Hello", "Hello", 8));
+	printf("%d", ft_strncmp("Hello", "Hello1", 8));
+	printf("\n%d", ft_strncmp("Hello", "He", 8));
+	printf("\n%d", ft_strncmp("He", "Hello", 8));
+	printf("\n%d", ft_strncmp("Hello", "Hello", 8));
 }
 */

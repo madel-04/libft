@@ -45,7 +45,7 @@ SRCS	= ft_atoi.c\
 			ft_strtrim.c\
 			ft_substr.c\
 			ft_tolower.c\
-			ft_toupper.c\
+			ft_toupper.c
 
 OBJS	= $(SRCS%.c=%.o)
 #Para generar los archivos objetos de una lista fuente SRCS
@@ -53,7 +53,7 @@ OBJS	= $(SRCS%.c=%.o)
 FLAGS = -Wall -Werror -Wextra #"-g3 -fsanitize=address" #Cuando compilas te dice si hay un leak de memoria
 
 $(NAME):
-	gcc $(FLAGS) -c $(SRCS) -I./ 
+	gcc $(FLAGS) -c $(SRCS) -I ./ 
 #Para compilar con las flags en el directorio actual, la I (Include directory) busca archivos de cabecera
 #en el directorio indicado. Los archivos fuentes .c con la cabecera propia (libft.h), si el .h está en el
 #directorio actual, se necesita el flag para que el compilador realice su función

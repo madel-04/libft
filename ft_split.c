@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:23:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/22 14:42:30 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/22 17:05:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	**ft_split2(char**dest, char const *s, int i, char c)
 				len++;
 				s++;
 			}
-			dest[i] = ft_substr(s, start, len);
+			dest[i] = ft_substr(start, 0, len);
 			if (!dest[i])
 				return (ft_free_split(dest, i));
 			i++;

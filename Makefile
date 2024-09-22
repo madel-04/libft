@@ -47,7 +47,7 @@ SRCS	= ft_atoi.c\
 			ft_tolower.c\
 			ft_toupper.c
 
-OBJS	= $(SRCS%.c=%.o)
+OBJS	= $(SRCS:%.c=%.o)
 #Para generar los archivos objetos de una lista fuente SRCS
 
 FLAGS = -Wall -Werror -Wextra #"-g3 -fsanitize=address" #Cuando compilas te dice si hay un leak de memoria
@@ -73,5 +73,6 @@ fclean: clean
 #Ejecuta primero el clean para eliminar los archivos objetos y luego la libreria .a
 
 re: fclean all
+
 #Aegurarse de que se construya desde un estado limpio
 #eliminando cualquier problema o residuo de compilaciones anteriores

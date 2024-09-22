@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:35:19 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/22 14:56:58 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/22 17:14:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	i;
 	unsigned int	j;
 
-	i = ft_length(dest);
+	i = ft_strlen(dest);
 	if (size <= i)
 		return (0);
 	j = 0;
@@ -29,5 +29,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		j++;
 	}
 	*dest = '\0';
-	return (ft_length(dest));
+	return (ft_strlen(dest));
 }

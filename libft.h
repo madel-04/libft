@@ -17,6 +17,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 /*Funciones */
 void	ft_bzero(void *s, size_t n);
@@ -69,4 +70,5 @@ typedef struct s_list
   +--------+---------+      +--------+---------+      +--------+---------+
 								(Nodo 1)               (Nodo 2)                (Nodo 3)
 */
+
 #endif

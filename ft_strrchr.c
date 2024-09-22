@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:23:24 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/20 12:55:05 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/22 15:40:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	j;
 
 	i = 0;
-	j = 0;
+	j = -1;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
@@ -26,9 +26,9 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (c == '\0')
-		return (s[i]);
-	if (j = 0)
-		return (NULL);
+		return ((char *)(s + i));
+	if (j != -1)
+		return ((char *)(s + j));
 	else
-		return (s[j]);
+		return (NULL);
 }

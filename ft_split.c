@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:23:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/20 12:51:29 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/22 14:42:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	**ft_split2(char**dest, char const *s, int i, char c)
 				len++;
 				s++;
 			}
-			dest[i] = ft_substr(*s, start, len);
+			dest[i] = ft_substr(s, start, len);
 			if (!dest[i])
 				return (ft_free_split(dest, i));
 			i++;
@@ -66,6 +66,8 @@ static char	**ft_split2(char**dest, char const *s, int i, char c)
 		else
 			s++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 char	**ft_split(char const *s, char c)
@@ -75,11 +77,11 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	dest = (char **)malloc((ft_word_count(*s, c) + 1) * sizeof(char *));
+	dest = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
 	if (!dest)
 		return (NULL);
 	i = 0;
-	ft_split2(dest, *s, i, c);
+	ft_split2(dest, s, i, c);
 	return (dest);
 }
 /*Representacion de un array de strings:

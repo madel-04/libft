@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:35:19 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/20 12:54:27 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/22 14:56:58 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	j;
 
 	i = ft_length(dest);
+	if (size <= i)
+		return (0);
 	j = 0;
 	while (*dest)
 		dest++;

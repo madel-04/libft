@@ -50,6 +50,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		nb = -nb;
 	}
+	str[len] = '\0';
 	while (nb > 9)
 	{
 		str[--len] = (nb % 10) + '0';

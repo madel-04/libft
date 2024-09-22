@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:24:17 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/20 12:54:26 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/22 14:54:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ de s1 y s2: NULL si falla la reserva de memoria*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *dest;
-	int i;
+	size_t	i;
 
 	if (!s1 || !s2)
-		return (0);
-	dest = (char *)malloc(sizeof(*dest) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+		return (NULL);
+	dest = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!dest)
 		return (NULL);
 	i = 0;

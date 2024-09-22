@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:23:57 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/20 12:55:08 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/22 15:45:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char *str;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i])) /*return a pointer to the byte,
 		locate the first occurrence of c*/
 		i++;
-	while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
+	while (ft_strchr(set, s1[j - 1]) && j > i)
 		j--;
 	str = (char *)malloc(sizeof(char) * (j - i + 1));
 	if (!str)

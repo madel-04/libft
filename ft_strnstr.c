@@ -15,19 +15,19 @@
 
 #include "libft.h"
 
-
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t position;
 
-	if (*big == '\0')
+	if (!little)
 		return ((char *)big);
 	position = ft_strlen((char *)little);
-	while (*big != '\0' && len-- >= position)
+	while (*big != '\0' && len >= position)
 	{
 		if (*big == *little && ft_memcmp(big, little, position) == 0)
 			return ((char *)big);
 		big++;
+		len--;
 	}
 	return (NULL);
 }

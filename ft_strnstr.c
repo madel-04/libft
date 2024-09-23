@@ -17,7 +17,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t position;
+	size_t	position;
 
 	if (!little)
 		return ((char *)big);

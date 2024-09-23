@@ -73,6 +73,6 @@ fclean: clean
 #Ejecuta primero el clean para eliminar los archivos objetos y luego la libreria .a
 
 re: fclean all
-
+#re for rebuilt
 #Aegurarse de que se construya desde un estado limpio
 #eliminando cualquier problema o residuo de compilaciones anteriores

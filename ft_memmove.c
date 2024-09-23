@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:18:54 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/22 16:58:32 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/23 10:48:13 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	if (dest == src || n == 0)
 		return (dest);
-if (dest < src)
+	if (dest < src)
 	{
-		// Copia de principio a fin
 		i = 0;
 		while (i < n)
 		{
@@ -30,7 +29,6 @@ if (dest < src)
 	}
 	else
 	{
-		// Copia de fin a principio
 		i = n;
 		while (i > 0)
 		{
@@ -40,3 +38,4 @@ if (dest < src)
 	}
 	return (dest);
 }
+/*Para copiar de principio a fin y de fin a principio*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:23:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/22 17:05:21 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/23 10:50:08 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ static char	**ft_free_split(char **dest, int i)
 
 static char	**ft_split2(char**dest, char const *s, int i, char c)
 {
-	int	len;
-	const char	*start;
+	int							len;
+	const char					*start;
 
 	while (*s)
 	{
@@ -73,7 +73,7 @@ static char	**ft_split2(char**dest, char const *s, int i, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**dest;
-	int	i;
+	int		i;
 
 	if (!s)
 		return (NULL);

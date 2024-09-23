@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/22 13:47:46 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/22 13:47:46 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/23 10:36:15 by madel-va          #+#    #+#             */
+/*   Updated: 2024/09/23 10:36:15 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Similar a la strmapi pero se indica el indice y la direccion del caracter*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+/*Crear un nuevo nodo y la variable miembreo content contiene contetn y next,
+	NULL*/
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	i;
+	t_list	*node;
 
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }

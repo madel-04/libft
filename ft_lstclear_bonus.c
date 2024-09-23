@@ -6,7 +6,7 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:07:30 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/23 11:21:36 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/23 11:52:03 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int		temp;
+	t_list		*temp;
 
 	if (!*lst)
 		return ;
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		temp = (*lst)->next;
 		ft_lstdelone((*lst), del);
-		(*lst) = temp;
+		*lst = temp;
 	}
 }
 /*Elimina y libera el nodo ’lst’ dado y todos los

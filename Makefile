@@ -10,67 +10,68 @@
 #                                                                              #
 # **************************************************************************** #
 
-LIB = ar rcs
-RM = rm -f
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-NAME = libft.a
-SRC = ft_tolower.c \
-	ft_putstr_fd.c \
-	ft_putendl_fd.c \
-	ft_isalnum.c \
-	ft_isalpha.c \
-	ft_isdigit.c \
-	ft_isascii.c \
-	ft_isprint.c \
-	ft_strlen.c \
-	ft_memset.c \
-	ft_bzero.c \
-	ft_memcpy.c \
-	ft_memmove.c \
-	ft_strlcpy.c \
-	ft_strlcat.c \
-	ft_toupper.c \
-	ft_strncmp.c \
-	ft_strnstr.c \
-	ft_putchar_fd.c \
-	ft_putnbr_fd.c \
-	ft_strjoin.c \
-	ft_calloc.c \
-	ft_strdup.c \
-	ft_memchr.c \
-	ft_memcmp.c \
-	ft_substr.c \
-	ft_itoa.c \
-	ft_split.c \
-	ft_strrchr.c \
-	ft_strmapi.c \
-	ft_striteri.c \
-	ft_atoi.c \
-	ft_strchr.c \
-	ft_strtrim.c
+LIB			= ar rcs
+RM			= rm -f
+CC			= gcc
+CFLAGS		= -Wall -Wextra -Werror
+NAME		= libft.a
 
-OBJ =	$(SRC:%.c=%.o)
+SRC			= ft_tolower.c \
+			  ft_putstr_fd.c \
+			  ft_putendl_fd.c \
+			  ft_isalnum.c \
+			  ft_isalpha.c \
+			  ft_isdigit.c \
+			  ft_isascii.c \
+			  ft_isprint.c \
+			  ft_strlen.c \
+			  ft_memset.c \
+			  ft_bzero.c \
+			  ft_memcpy.c \
+			  ft_memmove.c \
+			  ft_strlcpy.c \
+			  ft_strlcat.c \
+			  ft_toupper.c \
+			  ft_strncmp.c \
+			  ft_strnstr.c \
+			  ft_putchar_fd.c \
+			  ft_putnbr_fd.c \
+			  ft_strjoin.c \
+			  ft_calloc.c \
+			  ft_strdup.c \
+			  ft_memchr.c \
+			  ft_memcmp.c \
+			  ft_substr.c \
+			  ft_itoa.c \
+			  ft_split.c \
+			  ft_strrchr.c \
+			  ft_strmapi.c \
+			  ft_striteri.c \
+			  ft_atoi.c \
+			  ft_strchr.c \
+			  ft_strtrim.c
+
+OBJ			= $(SRC:%.c=%.o)
 #Para generar los archivos objetos de una lista fuente SRCS
 
 
-INCLUDE =	libft.h
+INCLUDE		= libft.h
 
-SRCBONUS =	ft_lstnew_bonus.c \
-			 ft_lstadd_front_bonus.c \
-			 ft_lstsize_bonus.c \
-			 ft_lstlast_bonus.c \
-			 ft_lstadd_back_bonus.c \
-			 ft_lstdelone_bonus.c \
-			 ft_lstclear_bonus.c \
+SRCBONUS	= ft_lstnew_bonus.c \
+			  ft_lstadd_front_bonus.c \
+			  ft_lstsize_bonus.c \
+			  ft_lstlast_bonus.c \
+			  ft_lstadd_back_bonus.c \
+			  ft_lstdelone_bonus.c \
+			  ft_lstclear_bonus.c
 
-OBJBONUS =	$(SRCBONUS:%.c=%.o)
+OBJBONUS	= $(SRCBONUS:%.c=%.o)
 
-all:	$(NAME)
+all: $(NAME)
 #Define el target/objetivo y especifica que depende de NAME
 #Si el archivo no existe o no está actualizado se ejecutan las reglas para obtenerlo
 
-$(NAME): 	$(OBJ) $(INCLUDE)
+$(NAME): $(OBJ) $(INCLUDE)
 		$(LIB) $(NAME) $(OBJ)
 
 # gcc $(FLAGS) -c $(SRCS) -I ./ 
@@ -79,9 +80,8 @@ $(NAME): 	$(OBJ) $(INCLUDE)
 #directorio actual, se necesita el flag para que el compilador realice su función
 #Fuerza a buscar en mi directorio sobre los del sistema si hubiera coincidencias
 
-bonus: 	$(OBJ) $(OBJBONUS) $(INCLUDE)
-		$(LIB) $(NAME) $(OBJBONUS) $(OBJ)
-
+bonus: $(OBJ) $(OBJBONUS) $(INCLUDE)
+	$(LIB) $(NAME) $(OBJBONUS) $(OBJ)
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -89,7 +89,7 @@ bonus: 	$(OBJ) $(OBJBONUS) $(INCLUDE)
 #la -c $< se refiere a la primera dependencia de la regla, siendo .c en este caso
 # -o $@ indica el nombre del archivo de salida y el $@ se refiere al nombre del objetivo de la regla (.o)
 
-.PHONY: clean fclean re
+.PHONY: clean fclean re rebonus
 #Objetivos declarados ficticios para que se ejecuten siempre que se invoquen sin importar
 #que haya archivos con los mismos nombres.
 

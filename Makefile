@@ -47,8 +47,18 @@ SRCS	= ft_atoi.c\
 			ft_tolower.c\
 			ft_toupper.c
 
+BNS_SRCS	= ft_lstadd_back_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstclear_bonus.c\
+			ft_lstdelone_bonus.c\
+			ft_lstlast_bonus.c\
+			ft_lstnew_bonus.c\
+			ft_lstsize_bonus.c
+
 OBJS	= $(SRCS:%.c=%.o)
 #Para generar los archivos objetos de una lista fuente SRCS
+
+BNS_OBJS	= $(BNS_SRCS:%.c=%.o)
 
 FLAGS = -Wall -Werror -Wextra #"-g3 -fsanitize=address" #Cuando compilas te dice si hay un leak de memoria
 
@@ -61,12 +71,16 @@ $(NAME):
 	ar rc $(NAME) $(OBJS)
 # ar para crear, modificar o extraer contenidos de archivos de librerias estáticas | r de replace por si es necesario | c create si aun no existe
 
+bonus : $(NAME)
+	gcc $(FLAGS) -c $(BNS_SRCS) -I ./
+	ar rc $(NAME) $(BNS_OBJS)
+
 all: $(NAME)
 #Define el target/objetivo y especifica que depende de NAME
 #Si el archivo no existe o no está actualizado se ejecutan las reglas para obtenerlo
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BNS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)

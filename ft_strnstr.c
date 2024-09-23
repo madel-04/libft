@@ -2,11 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
+/*                                                    +:+ +:+
 	+:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+      
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+
 	+#+        */
-/*                                                +#+#+#+#+#+  
+/*                                                +#+#+#+#+#+
 	+#+           */
 /*   Created: 2024/09/17 19:28:18 by marvin            #+#    #+#             */
 /*   Updated: 2024/09/17 19:28:18 by marvin           ###   ########.fr       */
@@ -17,9 +17,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	position;
+	size_t		position;
 
-	if (!little)
+	if (*little == '\0')
 		return ((char *)big);
 	position = ft_strlen((char *)little);
 	while (*big != '\0' && len >= position)

@@ -6,13 +6,13 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:23:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/23 10:50:08 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:51:08 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Reserva un array de strings destante de separar la string s en un substring 
+/*Reserva un array de strings destante de separar la string s en un substring
 usando el caracter c como delimitador
 EL ARRAY ACABA CON UN PUNTERO NULL*/
 static size_t	ft_word_count(char const *s, char c)
@@ -42,10 +42,10 @@ static char	**ft_free_split(char **dest, int i)
 	return (NULL);
 }
 
-static char	**ft_split2(char**dest, char const *s, int i, char c)
+static char	**ft_split2(char **dest, char const *s, int i, char c)
 {
-	int							len;
-	const char					*start;
+	int			len;
+	const char	*start;
 
 	while (*s)
 	{
@@ -66,7 +66,7 @@ static char	**ft_split2(char**dest, char const *s, int i, char c)
 		else
 			s++;
 	}
-	dest[i] = '\0';
+	dest[i] = NULL;
 	return (dest);
 }
 
@@ -81,11 +81,10 @@ char	**ft_split(char const *s, char c)
 	if (!dest)
 		return (NULL);
 	i = 0;
-	ft_split2(dest, s, i, c);
-	return (dest);
+	return (ft_split2(dest, s, i, c));
 }
 /*Representacion de un array de strings:
-char *array[] = {
+char			*array[] = {
 	"Hello",
 	"World",
 	"Array",

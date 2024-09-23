@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2024/09/18 15:17:42 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/18 15:17:42 by marvin           ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/23 15:49:04 by madel-va          #+#    #+#             */
+/*   Updated: 2024/09/23 15:49:04 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return ((char *)calloc(1, sizeof(char)));
+		return ((char *)ft_calloc(1, sizeof(char)));
 	if ((start + len) > s_len)
 		len = s_len - start;
 	dest = (char *)malloc((len + 1) * sizeof(char));

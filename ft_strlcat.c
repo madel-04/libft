@@ -6,7 +6,7 @@
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:35:19 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/23 14:46:38 by madel-va         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:59:51 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return (size + j);
 	k = 0;
 	while (src[k] != '\0' && (i + k) < size - 1)
-		dest++;
-	while (j < size - i - 1)
 	{
 		dest[i + k] = src[k];
 		k++;

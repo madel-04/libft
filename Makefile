@@ -12,7 +12,7 @@
 
 LIB			= ar rcs
 RM			= rm -f
-CC			= gcc
+CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 NAME		= libft.a
 
@@ -63,7 +63,10 @@ SRCBONUS	= ft_lstnew_bonus.c \
 			  ft_lstlast_bonus.c \
 			  ft_lstadd_back_bonus.c \
 			  ft_lstdelone_bonus.c \
-			  ft_lstclear_bonus.c
+			  ft_lstclear_bonus.c \
+			  ft_lstiter_bonus.c \
+			  ft_lstmap_bonus.c
+
 
 OBJBONUS	= $(SRCBONUS:%.c=%.o)
 

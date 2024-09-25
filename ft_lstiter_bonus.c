@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madel-va <madel-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:01:03 by madel-va          #+#    #+#             */
-/*   Updated: 2024/09/24 18:02:37 by madel-va         ###   ########.fr       */
+/*   Created: 2024/09/25 10:54:04 by madel-va          #+#    #+#             */
+/*   Updated: 2024/09/25 10:54:05 by madel-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	void	*buffer;
+	t_list	*pos;
 
-	buffer = malloc(nmemb * size);
-	if (!buffer)
-		return (NULL);
-	ft_bzero(buffer, size * nmemb);
-	return (buffer);
+	if (!lst)
+		return ;
+	while (pos != NULL)
+	{
+		(*f)(pos->content);
+		pos = pos->next;
+	}
 }
-/* || nmemb > SIZE_MAX/ size (Para eviar un overflow)*/
-/*SIZE_MAX s el valor max que puede almacenar un size_t, para
-comprobar que nmemb * size no lo supera*/
+/*Itera la lista lst y aplica la funcoin en el contenido de cada
+uno de los nodos*/
